@@ -1,0 +1,4161 @@
+<html lang="en">
+
+<head>
+<title>Query: Stadtviertel (ID: 2)</title>
+<link href="/arcgis/rest/static/main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<table width="100%" class="userTable">
+ <tr>
+ <td class="titlecell">
+ ArcGIS REST Services Directory
+ </td>
+ <td align="right">
+   <a href="https://geoportal.stadt-koeln.de/arcgis/rest/login">Login</a>
+       
+            | <a href="https://geoportal.stadt-koeln.de/arcgis/tokens/">Get Token</a>
+       </td>
+ </tr>
+</table>
+<table width="100%" class="navTable">
+<tr valign="top">
+<td class="breadcrumbs">
+<a href="/arcgis/rest/services">Home</a>
+
+  &gt; <a href="/arcgis/rest/services">services</a>
+  
+  &gt; <a href="/arcgis/rest/services/Stadtgliederung_15/MapServer">Stadtgliederung_15 (MapServer)</a>
+  
+  &gt; <a href="/arcgis/rest/services/Stadtgliederung_15/MapServer/2">Stadtviertel</a>
+  
+  &gt; <a href="/arcgis/rest/services/Stadtgliederung_15/MapServer/2/query"><i>query</i></a>
+  </td>
+<td align="right">
+<a href="https://geoportal.stadt-koeln.de/arcgis/sdk/rest/02ss/02ss00000057000000.htm" target="_blank">Help</a> | <a href="https://geoportal.stadt-koeln.de/arcgis/rest/services/Stadtgliederung_15/MapServer/2/query?f=help" target="_blank">API Reference</a>
+</td>
+</tr>
+</table><h2>Query: Stadtviertel (ID: 2)</h2>
+
+<div class="rbody">
+
+<div style="color:#ff6666"> 
+</div><form name="sdform" action="/arcgis/rest/services/Stadtgliederung_15/MapServer/2/query">
+
+<table class="formTable">
+
+<tr valign="top">
+<td><label for="where">Where:</label></td>
+<td><input type="text" id="where" name="where" value="objectid is not null" size="75"/></td>
+</tr>
+
+<tr valign="top">
+<td><label for="text">Text:</label></td>
+<td><input type="text" id="text" name="text" value=""/></td>
+</tr>
+
+<tr valign="top">
+<td><label for="objectIds">Object IDs:</label></td>
+<td><input type="text" id="objectIds" name="objectIds" value="" size="75"/></td>
+</tr>
+
+<tr valign="top">
+<td><label for="time">Time:</label></td>
+<td><input type="text" id="time" name="time" value="" size="75"/></td>
+</tr>
+
+<tr>
+<td><label for="geometry">Input Geometry:</label></td>
+<td>
+<textarea id="geometry" name="geometry" rows="5" cols="55"></textarea>
+</td>
+</tr>
+
+<tr>
+<td><label for="geometryType">Geometry Type:</label></td>
+<td>
+<select id="geometryType" name="geometryType">
+<option value="esriGeometryEnvelope" >Envelope</option>
+<option value="esriGeometryPoint" >Point</option>
+<option value="esriGeometryPolyline" >Polyline</option>
+<option value="esriGeometryPolygon" >Polygon</option>
+<option value="esriGeometryMultipoint" >Multipoint</option>
+</select>
+</td>
+</tr>
+
+<tr valign="top">
+<td><label for="inSR">Input Spatial Reference:</label></td>
+<td><input type="text" id="inSR" name="inSR" value="" size="75"/></td>
+</tr>
+
+<tr>
+<td><label for="spatialRel">Spatial Relationship:</label></td>
+<td>
+<select id="spatialRel" name="spatialRel">
+<option value="esriSpatialRelIntersects" >Intersects</option>
+<option value="esriSpatialRelContains" >Contains</option>
+<option value="esriSpatialRelCrosses" >Crosses</option>
+<option value="esriSpatialRelEnvelopeIntersects" >Envelope Intersects</option>
+<option value="esriSpatialRelIndexIntersects" >Index Intersects</option>
+<option value="esriSpatialRelOverlaps" >Overlaps</option>
+<option value="esriSpatialRelTouches" >Touches</option>
+<option value="esriSpatialRelWithin" >Within</option>
+<option value="esriSpatialRelRelation" >Relation</option>
+</select>
+</td>
+</tr>
+
+
+
+<tr valign="top">
+<td><label for="distance">Distance:</label></td>
+<td><input type="text" id="distance" name="distance" value="" /></td>
+</tr>
+<tr valign="top">
+<td><label for="units">Units:</label></td>
+<td>
+<select id="units" name="units">
+  	<option value="esriSRUnit_Foot" >Feet</option>
+  	<option value="esriSRUnit_Meter" >Meters</option>
+  	<option value="esriSRUnit_Kilometer" >Kilometers</option>
+  	<option value="esriSRUnit_StatuteMile" >Miles</option>
+  	<option value="esriSRUnit_NauticalMile" >Nautical Miles</option>
+  	<option value="esriSRUnit_USNauticalMile" >US Nautical Miles</option>
+ </select>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td><label for="relationParam">Relation:</label></td>
+<td><input type="text" id="relationParam" name="relationParam" value=""/></td>
+</tr>
+
+<tr valign="top">
+<td><label for="outFields">Out Fields:</label></td>
+<td><input type="text" id="outFields" name="outFields" value="" size="75"/></td>
+</tr>
+
+<tr>
+<td>Return Geometry:</td>
+<td>
+  <label><input type="radio" name="returnGeometry" value="true" checked="true" /> True &nbsp;</label>
+    <label><input type="radio" name="returnGeometry" value="false"   /> False</label>
+</td>
+</tr>
+
+<tr>
+<td>Return True Curves:</td>
+<td>
+  <label><input type="radio" name="returnTrueCurves" value="true"  /> True &nbsp;</label>
+    <label><input type="radio" name="returnTrueCurves" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr valign="top">
+<td><label for="maxAllowableOffset">Max Allowable Offset:</label></td>
+<td><input type="text" id="maxAllowableOffset" name="maxAllowableOffset" value=""/></td>
+</tr>
+
+<tr valign="top">
+<td><label for="geometryPrecision">Geometry Precision:</label></td>
+<td><input type="text" id="geometryPrecision" name="geometryPrecision" value="" /></td>
+</tr>
+
+<tr valign="top">
+<td><label for="outSR">Output Spatial Reference:</label></td>
+<td><input type="text" id="outSR" name="outSR" value="" size="75"/></td>
+</tr>
+
+<tr valign="top">
+<td><label for="havingClause">Having Clause:</label></td>
+<td><input type="text" id="havingClause" name="havingClause" value="" size="75"/></td>
+</tr>
+
+<tr>
+<td>Return IDs Only:</td>
+<td>
+  <label><input type="radio" name="returnIdsOnly" value="true"  /> True &nbsp;</label>
+  <label><input type="radio" name="returnIdsOnly" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr>
+<td>Return Count Only:</td>
+<td>
+  <label><input type="radio" name="returnCountOnly" value="true"  /> True &nbsp;</label>
+  <label><input type="radio" name="returnCountOnly" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr>
+<td><label for="orderByFields">Order By Fields:</label></td>
+<td><input type="text" id="orderByFields" name="orderByFields" value="" size="50"/></td>
+</tr>
+
+<tr>
+<td><label for="groupByFieldsForStatistics">Group By Fields (For Statistics):</label></td>
+<td><input type="text" id="groupByFieldsForStatistics" name="groupByFieldsForStatistics" value="" size="50"/></td>
+</tr>
+
+<tr>
+<td><label for="outStatistics">Output Statistics:</label></td>
+<td><textarea id="outStatistics" name="outStatistics" rows="5" cols="55"></textarea></td>
+</tr>
+
+<tr>
+<td>ReturnZ:</td>
+<td>
+  <label><input type="radio" name="returnZ" value="true"  /> True &nbsp;</label>
+  <label><input type="radio" name="returnZ" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr>
+<td>ReturnM:</td>
+<td>
+  <label><input type="radio" name="returnM" value="true"  /> True &nbsp;</label>
+    <label><input type="radio" name="returnM" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr valign="top">
+<td><label for="gdbVersion">Geodatabase Version Name:</label></td>
+<td><input type="text" id="gdbVersion" name="gdbVersion" value="" /></td>
+</tr>
+
+<tr valign="top">
+<td>Historic Moment:</td>
+<td><input type="text" name="historicMoment" value="" /></td>
+</tr>
+
+<tr>
+<td>Return Distinct Values:</td>
+<td>
+  <label><input type="radio" name="returnDistinctValues" value="true"  /> True &nbsp;</label>
+  <label><input type="radio" name="returnDistinctValues" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr valign="top">
+<td><label for="resultOffset">Result Offset:</label></td>
+<td><input type="text" id="resultOffset" name="resultOffset" value="" /></td>
+</tr>
+
+<tr valign="top">
+<td><label for="resultRecordCount">Result Record Count:</label></td>
+<td><input type="text" id="resultRecordCount" name="resultRecordCount" value="" /></td>
+</tr>
+
+<tr>
+<td>Return Extents Only:</td>
+<td>
+  <label><input type="radio" name="returnExtentOnly" value="true"  /> True &nbsp;</label>
+  <label><input type="radio" name="returnExtentOnly" value="false" checked="true"  /> False</label>
+</td>
+</tr>
+
+<tr valign="top">
+<td><label for="datumTransformation">Datum Transformation:</label></td>
+<td><input type="text" id="datumTransformation" name="datumTransformation" value="" /></td>
+</tr>
+
+<tr valign="top">
+<td><label for="parameterValues">Parameter Values:</label></td>
+<td><input type="text" id="parameterValues" name="parameterValues" value="" /></td>
+</tr>
+
+<tr valign="top">
+<td><label for="rangeValues">Range Values:</label></td>
+<td><input type="text" id="rangeValues" name="rangeValues" value="" /></td>
+</tr>
+
+<tr valign="top">
+<td><label for="quantizationParameters">Quantization Parameters:</label></td>
+<td><input type="text" id="quantizationParameters" name="quantizationParameters" value="" /></td>
+</tr>
+<tr valign="top">
+<td><label for="featureEncoding">Feature Encoding:</label></td>
+<td>
+<select id="featureEncoding" name="featureEncoding">
+<option value="esriDefault">EsriDefault</option>
+<option value="esriCompressedShapeBuffer">EsriCompressedShapeBuffer</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for="f">Format:</label></td>
+<td>
+<select id="f" name="f">
+<option value="html">HTML</option>
+<option value="pjson">JSON</option>
+<option value="kmz">KMZ</option>
+<option value="geojson">GeoJSON</option>
+<option value="pbf">PBF</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="left">
+<input type="submit" value="Query (GET)" />
+<input type="submit" onclick="this.form.method = 'post';" value="Query (POST)" />
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<script type="text/javascript">
+document.forms.sdform.where.focus();
+</script>
+
+<i># records: 374</i><br/><br/>
+<i>NAME: </i> Baum-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768634.618701418, 6623816.560537096]
+    , 
+      [768708.2360955023, 6623723.003380732]
+    , 
+      [768747.8783249484, 6623667.777442901]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Paulinenhof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779571.9833875095, 6622750.992091867]
+    , 
+      [779574.4424845842, 6622739.34885326]
+    , 
+      [779588.1745300326, 6622741.403663682]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Heimersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767549.1002933678, 6623367.142228871]
+    , 
+      [767579.5186817852, 6623281.585706357]
+    , 
+      [767597.1382365223, 6623291.772611501]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Krawinkel-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763192.4494508376, 6622828.643649797]
+    , 
+      [763227.6990288744, 6622912.60273016]
+    , 
+      [763246.0164493697, 6622962.995627937]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Flittard<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776943.6608970067, 6623351.313020132]
+    , 
+      [776951.964421039, 6623325.014418289]
+    , 
+      [776952.2926636921, 6623325.198482446]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Kunstfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782950.9945673613, 6622682.302956372]
+    , 
+      [782972.9734926192, 6622731.835831286]
+    , 
+      [782996.9883695374, 6622788.56067588]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bergheimerhof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769369.1369630453, 6622670.669244054]
+    , 
+      [769401.0425328338, 6622702.223555595]
+    , 
+      [769544.0896524229, 6622857.098664644]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Am Donewald<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782224.2481498881, 6622011.512460075]
+    , 
+      [782217.8598574713, 6621983.21620626]
+    , 
+      [782190.4436306816, 6621984.760153648]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Pesch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764677.057507924, 6622474.951767357]
+    , 
+      [764723.7968563207, 6622503.056067369]
+    , 
+      [764844.8380150126, 6622576.351637238]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Klosterhof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782133.7815607919, 6622644.075724471]
+    , 
+      [782156.2125339119, 6622644.302990825]
+    , 
+      [782177.3504980396, 6622645.089121729]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Lindweiler<br/>
+	    <i>Polygon:</i><br/>
+  
+      [766811.183567767, 6622905.598033695]
+    , 
+      [766847.9049538086, 6622736.5186225595]
+    , 
+      [766877.5204778676, 6622663.808799488]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Lindweiler<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767421.4984752887, 6622116.238576522]
+    , 
+      [767456.7162139686, 6622054.029382004]
+    , 
+      [767464.5273323378, 6622058.625529216]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Auweiler<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763338.2011372509, 6622171.211282313]
+    , 
+      [763220.3507708232, 6621956.886966332]
+    , 
+      [763214.9726437561, 6621947.16991365]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Hardthof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786665.2812392131, 6621315.58244995]
+    , 
+      [786600.9013948604, 6621255.584328978]
+    , 
+      [786597.1145459487, 6621259.121696593]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Flittard<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776767.6364149428, 6622356.40127515]
+    , 
+      [776792.7067518124, 6622238.883631336]
+    , 
+      [776825.4845954035, 6622241.766851261]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> D&uuml;nnwald<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784237.973301345, 6622091.01423083]
+    , 
+      [784233.1523348637, 6622036.934861787]
+    , 
+      [784264.6795513312, 6622034.607371067]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> L&uuml;ttich Kaserne<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769709.3069976851, 6622102.651182168]
+    , 
+      [769714.4726947437, 6622102.268911177]
+    , 
+      [769743.1415566481, 6622101.768849524]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Pesch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764208.4816951415, 6621173.049856457]
+    , 
+      [764424.4768512179, 6621288.439553256]
+    , 
+      [764639.691285323, 6621404.343209465]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Longerich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768302.097237367, 6621230.0334342895]
+    , 
+      [768360.2585781396, 6621115.1690012235]
+    , 
+      [768408.5542852489, 6621122.287556569]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Longerich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770175.9396011488, 6621186.725785082]
+    , 
+      [770180.3577167039, 6621159.334372064]
+    , 
+      [770252.1646224001, 6621169.2723540375]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Worringen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763397.8171218202, 6633778.933162428]
+    , 
+      [763419.4865706036, 6633763.009839912]
+    , 
+      [763431.8321950505, 6633763.43884074]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Am Worringer Bruch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [766296.2745118978, 6631209.776541227]
+    , 
+      [766316.9649535428, 6631131.2973646745]
+    , 
+      [766277.9866237823, 6631076.191031695]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Thenhoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762128.010747113, 6628626.990503095]
+    , 
+      [762133.4378648833, 6628653.187522343]
+    , 
+      [762146.37006324, 6628715.1389060225]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rheinkassel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771666.2551658779, 6628894.112528773]
+    , 
+      [771675.1689095373, 6628886.00986806]
+    , 
+      [771686.9609064428, 6628889.648027633]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Blumenberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767015.2771814568, 6628806.480605828]
+    , 
+      [767008.7445413745, 6628735.959926612]
+    , 
+      [767033.0361423139, 6628735.156071785]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kasselberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772837.3376814687, 6628259.074321459]
+    , 
+      [772841.9730246143, 6628274.05387856]
+    , 
+      [772863.4594749855, 6628343.33981252]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Feldkassel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768986.3076071626, 6629193.802414442]
+    , 
+      [769644.7029819692, 6628737.162174256]
+    , 
+      [769691.8813221795, 6628792.883105554]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Merkenich-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770863.6285074372, 6626227.850173665]
+    , 
+      [770867.0153607535, 6626229.669001181]
+    , 
+      [770879.920815287, 6626235.122777022]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Chorweiler-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767079.7489413058, 6627364.123050664]
+    , 
+      [767089.9063848075, 6627348.3738800725]
+    , 
+      [767137.4049628746, 6627377.235703485]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Weiler<br/>
+	    <i>Polygon:</i><br/>
+  
+      [765330.7966269591, 6625377.312446752]
+    , 
+      [765404.8669460086, 6625423.328541663]
+    , 
+      [765479.1945146935, 6625469.5638223905]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Merkenich-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774217.6759519846, 6624995.738471089]
+    , 
+      [774231.8305423639, 6624924.748237234]
+    , 
+      [774233.6465763048, 6624925.329093329]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Oranjehof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769404.3463449815, 6624563.7437100075]
+    , 
+      [769405.646175992, 6624573.939953678]
+    , 
+      [769410.0052539848, 6624582.634816876]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Seeberg-Mitte<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769212.5848182937, 6624379.310037129]
+    , 
+      [769214.2189078382, 6624376.728820628]
+    , 
+      [769214.248838522, 6624380.450717255]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Esch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763561.5829413623, 6624258.515508165]
+    , 
+      [763558.3803754831, 6624212.3129798705]
+    , 
+      [763666.2848258066, 6624049.91983124]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Seeberg-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768859.1932260914, 6623653.463869454]
+    , 
+      [769034.712966309, 6623752.390624104]
+    , 
+      [769040.0756594115, 6623755.044094885]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Stammheim-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778442.9657387405, 6619955.196767595]
+    , 
+      [778468.4696000401, 6619920.3528326005]
+    , 
+      [778470.6499253366, 6619917.413906651]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Stammheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778035.7865899048, 6618406.104849277]
+    , 
+      [777976.519817988, 6618432.998013523]
+    , 
+      [777949.4046324702, 6618445.554566268]
+    more...<br/>
+  
+      [778035.783224179, 6618406.100304335]
+    , 
+      [778035.7865899048, 6618406.104849277]
+    , 
+      [778035.8203138068, 6618406.089550453]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Merheim (lrh.)<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772056.856859345, 6618919.41482668]
+    , 
+      [772147.4034598594, 6618956.063205342]
+    , 
+      [772266.4917519812, 6619004.237239581]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Am Ginsterpfad<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771260.741039257, 6619369.166806303]
+    , 
+      [771296.7556396999, 6619374.864019233]
+    , 
+      [771324.6680904721, 6619379.280362095]
+    more...<br/>
+  
+      [770911.1332322966, 6619476.065682959]
+    , 
+      [770926.3035598252, 6619483.425890423]
+    , 
+      [770928.769377337, 6619485.350209305]
+    more...<br/>
+  
+      [771179.4545855884, 6619221.492569501]
+    , 
+      [771201.7969561847, 6619205.345347689]
+    , 
+      [771237.7448944633, 6619179.297542412]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Blumen-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786920.9232298022, 6618596.5643486185]
+    , 
+      [786927.2997287741, 6618517.921920813]
+    , 
+      [786928.1797425236, 6618493.270744169]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Thielenbruch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789010.6682996915, 6619065.363267139]
+    , 
+      [788935.29673437, 6619051.360872329]
+    , 
+      [788932.1589832129, 6619052.535978247]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Goldregenweg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782957.8559171176, 6617734.408517508]
+    , 
+      [782958.4228990341, 6617717.139574256]
+    , 
+      [782959.861048564, 6617700.954931768]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> B&ouml;cking-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779994.861385193, 6615886.3919161875]
+    , 
+      [779930.5922777145, 6615833.869954571]
+    , 
+      [779910.193651521, 6615834.292187217]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Hagedorn<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785306.0777779754, 6617198.142608876]
+    , 
+      [785336.3975393845, 6617137.98122669]
+    , 
+      [785351.3798678975, 6617108.4826124655]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Drosselweg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774394.9947676861, 6617119.884351379]
+    , 
+      [774430.2710828241, 6617164.64060479]
+    , 
+      [774445.5142700293, 6617183.831664659]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gr&uuml;ner Hof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773301.7183259326, 6617287.883531868]
+    , 
+      [773313.4989692523, 6617290.624413648]
+    , 
+      [773312.9214388846, 6617297.513661214]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Nibelungen-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772282.1864284253, 6617293.561614147]
+    , 
+      [772305.6576033443, 6617232.041734106]
+    , 
+      [772311.3824429171, 6617217.267618585]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Boltensternstra&szlig;e<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776253.1585568876, 6617254.056519308]
+    , 
+      [776313.3673335131, 6617192.070569834]
+    , 
+      [776449.9485522456, 6617001.929696167]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Wohnpark Niehl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774753.5780876554, 6616727.862033661]
+    , 
+      [774753.6943796739, 6616729.497395531]
+    , 
+      [774785.7681671355, 6617153.647797189]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bilderst&ouml;ckchen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771890.4027655406, 6616635.513888379]
+    , 
+      [771834.9225157336, 6616565.658250605]
+    , 
+      [771899.100147759, 6616515.767735241]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Bocklem&uuml;nd<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763536.5098968736, 6616981.06390914]
+    , 
+      [763539.0707587131, 6616985.92888896]
+    , 
+      [763652.3935060028, 6617200.617794231]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Mauenheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773242.6731802366, 6616509.071717334]
+    , 
+      [773258.1213135176, 6616618.844097041]
+    , 
+      [773263.5443704027, 6616657.423446954]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Dellbr&uuml;ck-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785965.8777130666, 6616118.665435258]
+    , 
+      [786038.8826874228, 6616147.788911019]
+    , 
+      [786145.8189745084, 6616190.040255716]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Strunden<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789975.6127029936, 6616650.691774751]
+    , 
+      [789978.8543585036, 6616644.842768157]
+    , 
+      [790020.840863652, 6616668.37233588]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> M&auml;rchen-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785312.8343040119, 6616069.869015845]
+    , 
+      [785323.6439211143, 6616105.468597635]
+    , 
+      [785325.232601032, 6616111.293748622]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Subbelrather Hof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762483.0125285466, 6616717.577440805]
+    , 
+      [762511.2814413063, 6615867.866620624]
+    , 
+      [762164.9125167422, 6615790.823011915]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Iddelsfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785899.0257036417, 6616114.56311548]
+    , 
+      [785908.9486609983, 6616094.348169465]
+    , 
+      [785909.1124007583, 6616094.416719833]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Westend<br/>
+	    <i>Polygon:</i><br/>
+  
+      [766985.613435393, 6614915.63830065]
+    , 
+      [766951.535698171, 6614713.898370825]
+    , 
+      [766930.945024387, 6614728.57452601]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Buchheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782546.2744498553, 6616008.958377567]
+    , 
+      [782534.7020278085, 6615982.943992837]
+    , 
+      [782507.9585353965, 6615922.107653432]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> M&uuml;lheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779910.193651521, 6615834.292187217]
+    , 
+      [779930.5922777145, 6615833.869954571]
+    , 
+      [779994.861385193, 6615886.3919161875]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Riehler Heimst&auml;tten<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776893.9791595739, 6615702.465497879]
+    , 
+      [776929.0080293822, 6615707.655956398]
+    , 
+      [776989.1132003524, 6615728.75171817]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Naumann-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776517.7225085532, 6615773.444009995]
+    , 
+      [776607.4539178964, 6615811.867345925]
+    , 
+      [776668.5294908809, 6615838.053642254]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Vogelsang-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [765959.9733869429, 6615361.586591844]
+    , 
+      [766015.6892638509, 6615332.143117916]
+    , 
+      [766037.7821709382, 6615362.894333533]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Parkg&uuml;rtel-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771082.0643210433, 6615820.325563519]
+    , 
+      [771082.3356945264, 6615820.481069606]
+    , 
+      [771090.8756303474, 6615825.362897986]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Mielenforster Heide<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789510.6923324977, 6615480.679429521]
+    , 
+      [789523.1352398521, 6615480.860096301]
+    , 
+      [789535.1750444444, 6615482.71492896]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Sch&ouml;nrath<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782504.2096664463, 6619208.190098768]
+    , 
+      [782446.1815615441, 6618937.153295549]
+    , 
+      [782439.7502857159, 6618907.946202345]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Bocklem&uuml;nd-West<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762271.9936298217, 6619027.234860664]
+    , 
+      [762279.3882804455, 6619022.285231553]
+    , 
+      [762340.5908505046, 6618981.361062886]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Stammheim-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779154.9823151988, 6619064.347150605]
+    , 
+      [779153.748539777, 6619020.274374832]
+    , 
+      [779148.6934682777, 6618990.592651697]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> M&uuml;lheim-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779373.2022236888, 6618959.145130804]
+    , 
+      [779390.0851668243, 6618946.1503143255]
+    , 
+      [779392.7602581998, 6618951.693445433]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bruder-Klaus-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780428.803331035, 6618976.481248058]
+    , 
+      [780430.211370982, 6618949.951235152]
+    , 
+      [780456.9114203377, 6618960.741675058]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Waltherstr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787212.8591059996, 6618944.056814513]
+    , 
+      [787290.8720453779, 6618885.680194164]
+    , 
+      [787270.6178419006, 6618858.428949732]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Ginsterberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770542.039530834, 6618760.250421687]
+    , 
+      [770468.2488417282, 6618745.629554231]
+    , 
+      [770434.8144179966, 6618822.015791226]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Hafen Niehl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778290.1060310758, 6616659.30800601]
+    , 
+      [778300.2851634629, 6616621.776896627]
+    , 
+      [778305.721485683, 6616601.695554194]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Niehl-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774852.0345394801, 6618572.764200073]
+    , 
+      [774858.3001647271, 6618572.253207904]
+    , 
+      [774862.1937730229, 6618572.551901352]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Mengenich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763145.8349737697, 6617988.865016036]
+    , 
+      [763336.4933020286, 6618269.474249957]
+    , 
+      [763349.2985230256, 6618288.2716701515]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Dellbr&uuml;ck<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788033.6687042945, 6618062.882855014]
+    , 
+      [788036.0143013876, 6618057.412359161]
+    , 
+      [788041.3164788535, 6618043.807962302]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Weidenpesch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772466.4811200143, 6618195.135863362]
+    , 
+      [772488.553360879, 6618211.781806188]
+    , 
+      [772503.5178856689, 6618219.236048908]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Bocklem&uuml;nd-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763692.5914098619, 6616909.327530068]
+    , 
+      [763853.470753405, 6616705.596025891]
+    , 
+      [763807.1867762328, 6616733.033799516]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Bocklem&uuml;nd<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764894.7952962094, 6618337.125397456]
+    , 
+      [764916.416710336, 6618334.213016724]
+    , 
+      [764918.2082136724, 6618347.5943879755]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Heckpfad<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771549.9502313896, 6618362.568880393]
+    , 
+      [771668.7648456636, 6618245.457573482]
+    , 
+      [771670.7223701498, 6618243.5413059555]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Neurath<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780962.9194197388, 6618016.324543797]
+    , 
+      [780976.6082789814, 6618004.2461497355]
+    , 
+      [780979.5642995356, 6618007.098031718]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Niehl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775680.8875667233, 6617944.253422914]
+    , 
+      [775827.6356876193, 6617961.567545556]
+    , 
+      [775907.2586015553, 6617862.352944131]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gew&uuml;rzviertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782096.1786221461, 6617256.446749295]
+    , 
+      [782254.1305616377, 6617707.988450891]
+    , 
+      [782294.9628047763, 6617796.790607885]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Schanzenstr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781417.5249585392, 6617607.965934383]
+    , 
+      [781454.6735333857, 6617575.2991246665]
+    , 
+      [781458.7637017211, 6617578.77069894]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ford-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775680.8875667233, 6617944.253422914]
+    , 
+      [775750.3137329794, 6617356.058660364]
+    , 
+      [775773.8677747062, 6617156.527475125]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Moorslede<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785916.0359865243, 6616858.1453241715]
+    , 
+      [785854.5268787025, 6616820.906326681]
+    , 
+      [785853.4787074869, 6616822.971577388]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gartenstadt-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771152.6655562047, 6620968.252401248]
+    , 
+      [771155.9107707661, 6620964.631889104]
+    , 
+      [771156.302740584, 6620964.88347436]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Oststra&szlig;en-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782962.9935070116, 6620707.93345459]
+    , 
+      [782964.3331876335, 6620707.342222368]
+    , 
+      [783048.0209067906, 6620718.089527712]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Haan<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784216.8222720465, 6620668.146739623]
+    , 
+      [784217.173811491, 6620663.848684233]
+    , 
+      [784259.904601903, 6620671.349943204]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Waldbad<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786040.8140847486, 6619939.886200483]
+    , 
+      [786032.879735894, 6619936.137524693]
+    , 
+      [785921.6624336289, 6620066.330186395]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> H&ouml;henhaus<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783622.4960478494, 6620311.541073871]
+    , 
+      [783712.5948593105, 6620246.272308903]
+    , 
+      [783718.1525748017, 6620242.33025967]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Emberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782484.3450329787, 6620062.036742542]
+    , 
+      [782485.4054294887, 6620060.749883419]
+    , 
+      [782493.8147696197, 6620065.703799669]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Buchforst<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779557.5999826514, 6612724.235305981]
+    , 
+      [779669.3088692346, 6612725.87945886]
+    , 
+      [779692.7133027925, 6612730.960460879]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Ehrenfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769174.9731343695, 6612936.463542315]
+    , 
+      [769161.6083810484, 6612908.640004983]
+    , 
+      [769156.4157212052, 6612897.346661726]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Villen-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775528.8763583216, 6612488.792774574]
+    , 
+      [775532.3938785535, 6612486.427577013]
+    , 
+      [775537.6410084383, 6612486.692137557]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> L&ouml;venich-West<br/>
+	    <i>Polygon:</i><br/>
+  
+      [760181.205764099, 6613283.961945444]
+    , 
+      [760175.5479854712, 6612831.590463011]
+    , 
+      [760169.4482016871, 6612622.383207429]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ehrenfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770476.9688090038, 6613151.6009626025]
+    , 
+      [770481.4847183632, 6613149.114010057]
+    , 
+      [770481.8572921618, 6613149.776479286]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Blauer Hof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779731.8622057772, 6612958.419494551]
+    , 
+      [779779.7363613762, 6612749.786043894]
+    , 
+      [779762.0605474258, 6612746.580549375]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Wei&szlig;e Stadt<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779808.8233615662, 6612646.139365601]
+    , 
+      [779934.9335104977, 6612692.146780061]
+    , 
+      [779966.0364550713, 6612702.998869089]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Klausenberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788057.4565221217, 6612274.282651047]
+    , 
+      [788059.0491562492, 6612274.862792739]
+    , 
+      [788092.4968962201, 6612287.253467162]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Egelspfad<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764069.4294286472, 6612400.624811044]
+    , 
+      [764080.2490557953, 6612326.29334365]
+    , 
+      [764092.2904357053, 6612331.658979488]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Media-Park<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773934.9292509283, 6612200.129812891]
+    , 
+      [773921.6094702678, 6612190.86542145]
+    , 
+      [773891.5972975251, 6612195.800721103]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Br&uuml;ck<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788097.8765911325, 6612113.249386333]
+    , 
+      [788102.0755975476, 6612113.330727532]
+    , 
+      [788173.0648504299, 6612116.973569034]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Eigelstein-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774633.7667412234, 6612458.578764877]
+    , 
+      [774631.4336699354, 6612426.476060976]
+    , 
+      [774610.0281987966, 6612323.5423635915]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kuniberts-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774666.7613025162, 6612457.10019033]
+    , 
+      [774666.3882669787, 6612445.430358889]
+    , 
+      [774662.4611483238, 6612445.561026143]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Vogelsanger Str.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771196.259298967, 6611433.48790291]
+    , 
+      [771151.8781369983, 6611332.8020157525]
+    , 
+      [771129.8628107065, 6611282.8558960315]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE L&ouml;venich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [761998.588687698, 6612619.971078655]
+    , 
+      [762086.5169790887, 6612619.130014206]
+    , 
+      [762492.1041950689, 6612653.900043751]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Kalk<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779418.2860721207, 6611896.473352166]
+    , 
+      [779414.3493471736, 6611768.400652989]
+    , 
+      [779411.5385563486, 6611690.709520574]
+    more...<br/>
+  
+      [779010.2906540177, 6612250.81843196]
+    , 
+      [779010.7056156808, 6612250.8287733635]
+    , 
+      [779017.877930993, 6612251.037819456]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Colonius<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771923.2932863138, 6611370.572109928]
+    , 
+      [771881.2113630562, 6611278.374206428]
+    , 
+      [771870.8332243938, 6611259.1232752325]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Waldtier-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789246.9936239726, 6611938.891927896]
+    , 
+      [789297.823870552, 6611731.573953311]
+    , 
+      [789311.1686489686, 6611677.144400462]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ursula-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773950.1234038618, 6612211.275621695]
+    , 
+      [773998.4956484666, 6612155.855701938]
+    , 
+      [774003.870386567, 6612149.6980635645]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Garten-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767590.1294613413, 6615720.069146229]
+    , 
+      [767676.7152648628, 6615602.564064827]
+    , 
+      [767679.5963192496, 6615605.396527949]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Wichheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783998.2652989537, 6615296.831826153]
+    , 
+      [783984.0160118173, 6615284.910331182]
+    , 
+      [783982.51682472, 6615284.232477413]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Parkg&uuml;rtel-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771857.4917340764, 6615037.642254449]
+    , 
+      [772053.866404397, 6615262.168795912]
+    , 
+      [772165.7927237008, 6615379.707610256]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Clouth-Gel&auml;nde<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775206.1008387662, 6614951.483592743]
+    , 
+      [775180.0727259808, 6614775.155262383]
+    , 
+      [775117.6093448254, 6614785.477766119]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Keupstr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780190.5838960778, 6615287.140352172]
+    , 
+      [780255.0036445087, 6615245.468135713]
+    , 
+      [780257.0307420165, 6615248.856468408]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kleinherl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782465.7110642282, 6614974.160754585]
+    , 
+      [782477.276740871, 6614968.310691026]
+    , 
+      [782481.3845768548, 6614968.570847412]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Neu-Vogelsang<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764930.7381942152, 6615184.088151856]
+    , 
+      [764985.9408063956, 6615161.983361129]
+    , 
+      [765001.8996920206, 6615167.4663211685]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> B&uuml;ropark-Holweide<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785208.4025041519, 6614952.1939342525]
+    , 
+      [785206.1324563016, 6614944.139081663]
+    , 
+      [785229.9316799466, 6614950.661902106]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> M&uuml;lheimer Stadtgarten<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780315.4649558858, 6614675.088196864]
+    , 
+      [780405.9719548693, 6614665.48717362]
+    , 
+      [780489.3500393494, 6614687.299065858]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Niederl&auml;nder-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777571.9833356496, 6614911.950384026]
+    , 
+      [777597.877348352, 6614863.3019892275]
+    , 
+      [777626.9596774627, 6614882.661556989]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Florastr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774810.3468533983, 6614820.562589802]
+    , 
+      [774834.223677397, 6614816.385059308]
+    , 
+      [774836.3019242814, 6614831.828444523]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gut Mielenforst<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786496.4162371113, 6614537.674002779]
+    , 
+      [786496.9179998366, 6614541.702268252]
+    , 
+      [786501.4252289286, 6614578.481391574]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Sechzig-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772992.1106784099, 6614683.566858637]
+    , 
+      [773005.914981938, 6614681.292287991]
+    , 
+      [773039.6239734874, 6614687.881919447]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neuehrenfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770964.4827384036, 6614410.291701161]
+    , 
+      [770964.8559620068, 6614409.730940601]
+    , 
+      [771006.828834816, 6614437.4665335165]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Bickendorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768077.3250828753, 6613351.15095098]
+    , 
+      [768069.6854110124, 6613330.053021225]
+    , 
+      [768058.6359476461, 6613299.545093499]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Max-Planck-Institut<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764052.8231596448, 6614576.592685156]
+    , 
+      [764177.4599188524, 6614311.630239437]
+    , 
+      [764184.8884420105, 6614295.957398263]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Schlagbaum<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784574.6757836851, 6613825.772926166]
+    , 
+      [784520.7945406418, 6613799.798766558]
+    , 
+      [784512.6167149082, 6613795.856529509]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Vogelsang<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764698.4060942135, 6613949.744272696]
+    , 
+      [764699.8574425458, 6613970.761184495]
+    , 
+      [764782.0995289121, 6613936.600782099]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Merheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785175.6102005289, 6613427.255527775]
+    , 
+      [785148.5018010227, 6613339.382331834]
+    , 
+      [785079.1479270771, 6613347.7464839555]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Agnes-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774742.0159273362, 6613796.5607104255]
+    , 
+      [774707.822750663, 6613729.28316687]
+    , 
+      [774752.4431787531, 6613711.273449583]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gerichts-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774928.6701251306, 6613160.148053727]
+    , 
+      [774937.1219363066, 6613344.690086457]
+    , 
+      [774937.2078487029, 6613346.420567206]
+    more...<br/>
+  
+      [775184.9442911128, 6613735.037640653]
+    , 
+      [775188.3192494159, 6613735.057025363]
+    , 
+      [775188.1904252942, 6613734.899761019]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Br&uuml;cker Heide<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787923.3016102833, 6612866.732819818]
+    , 
+      [787962.277356337, 6612752.919020182]
+    , 
+      [787965.8313468301, 6612755.456079635]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Buchenkamp<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789910.308104165, 6613237.602552698]
+    , 
+      [789908.0030273069, 6613229.246724513]
+    , 
+      [789906.7264840502, 6613224.65238506]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Buchheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782079.4524152166, 6613039.102439876]
+    , 
+      [782002.3923443857, 6612996.91119072]
+    , 
+      [782017.9459205605, 6612944.067373563]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Germaniastr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780591.1732468838, 6613227.896146018]
+    , 
+      [780610.447372918, 6613222.769748242]
+    , 
+      [780631.9706947178, 6613221.0755018415]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Braunsfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768160.2231757347, 6611398.202158167]
+    , 
+      [768169.5000827237, 6611311.961806856]
+    , 
+      [768192.5448517126, 6611314.442866632]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Braunsfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768502.3113022791, 6611449.036452775]
+    , 
+      [768503.8715564822, 6611440.615706348]
+    , 
+      [768510.6008301728, 6611441.708299925]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Merheimer Heide<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783837.4873595304, 6611103.747633049]
+    , 
+      [783844.5034627323, 6611088.710707751]
+    , 
+      [783844.9758859117, 6611087.698128417]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Belgisches Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772596.2298627989, 6610465.919926952]
+    , 
+      [772592.3025805431, 6610434.813485531]
+    , 
+      [772573.9695721606, 6610437.858571143]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> C&auml;cilien-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773343.0871373533, 6610123.336725309]
+    , 
+      [773343.3312979734, 6610102.833339199]
+    , 
+      [773391.57659814, 6610092.470496847]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Georgs-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774820.6395146396, 6609715.265413953]
+    , 
+      [774821.6720319615, 6609709.441290567]
+    , 
+      [774827.8163702991, 6609710.435358739]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kapitol-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774544.6101295489, 6609873.810820457]
+    , 
+      [774589.5036723294, 6609874.782088443]
+    , 
+      [774616.4477863645, 6609883.815479943]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Lindenthal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770861.153858926, 6609638.1424345095]
+    , 
+      [770862.6091606285, 6609565.8296301225]
+    , 
+      [770862.9650082146, 6609556.29820004]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rheinauhafen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775321.2588801658, 6609226.23768748]
+    , 
+      [775324.0644484921, 6609213.101690904]
+    , 
+      [775324.73143242, 6609213.2518328475]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rathenau-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772048.6512774203, 6609415.054871563]
+    , 
+      [772062.5088134285, 6609410.146889196]
+    , 
+      [772081.81388309, 6609411.520873315]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Hafen-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777003.7158891783, 6608560.652575938]
+    , 
+      [777059.4609807292, 6608552.987546491]
+    , 
+      [777060.9672782988, 6608553.142148166]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Pantaleons-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774284.1057470153, 6608843.637928105]
+    , 
+      [774326.0640832286, 6608738.035230969]
+    , 
+      [774343.5267929819, 6608668.014123906]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Studenten-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772147.4928891661, 6608666.783252536]
+    , 
+      [772372.9267552958, 6608867.863950823]
+    , 
+      [772437.103002991, 6608925.123285381]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rath<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789691.6859902733, 6608754.8551961]
+    , 
+      [789749.5420054782, 6608598.40150525]
+    , 
+      [789758.0125136311, 6608571.60268239]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> G&ouml;ttersiedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789674.6827889143, 6608782.89278836]
+    , 
+      [789676.4286069867, 6608783.168503367]
+    , 
+      [789690.9867028258, 6608786.794199376]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Severins-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775444.8561646687, 6607974.115387526]
+    , 
+      [775451.5900719092, 6607962.3745694375]
+    , 
+      [775465.4721172355, 6607937.871222335]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Herkenrathweg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785666.6842689345, 6608075.504627918]
+    , 
+      [785615.0828344151, 6608034.446261242]
+    , 
+      [785475.3545758945, 6607923.484156566]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Volksgarten-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772813.2426319778, 6608828.78162151]
+    , 
+      [772829.9511211669, 6608812.404642066]
+    , 
+      [772824.7455502575, 6608806.501604824]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Deutzer Hafen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777261.5665102529, 6607118.81804609]
+    , 
+      [777234.7893453664, 6607093.285612719]
+    , 
+      [777209.9524824984, 6607069.616072581]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Stadtwaldsiedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [765338.4334559095, 6608747.828901006]
+    , 
+      [765338.8932212538, 6608718.435585231]
+    , 
+      [765339.0496696987, 6608714.2581184795]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Poll<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778532.0322015333, 6608262.440643212]
+    , 
+      [778629.9659672772, 6608187.357725476]
+    , 
+      [778717.0649069047, 6608133.202205069]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> S&uuml;lz<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771445.260764886, 6608088.817937053]
+    , 
+      [771579.7531341923, 6607717.081918373]
+    , 
+      [771590.6338109256, 6607687.210690251]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rolshoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778740.4429916553, 6606724.48374049]
+    , 
+      [778703.3222489464, 6606664.621336493]
+    , 
+      [778680.6652270238, 6606627.864799142]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Stadion<br/>
+	    <i>Polygon:</i><br/>
+  
+      [765177.1637241595, 6610482.428773147]
+    , 
+      [765181.264818484, 6610447.507458638]
+    , 
+      [765181.4805876373, 6610445.662890399]
+    more...<br/>
+  
+      [764743.26376831, 6611278.517078819]
+    , 
+      [764749.8000220053, 6611261.907152231]
+    , 
+      [764800.1595297605, 6611275.954021109]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Weiden<br/>
+	    <i>Polygon:</i><br/>
+  
+      [760991.3667622329, 6611056.43954713]
+    , 
+      [761232.7321718592, 6610874.729067857]
+    , 
+      [761238.2598408331, 6610870.552869711]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neumarkt-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773992.8510447306, 6610938.316849677]
+    , 
+      [774015.4074879249, 6610782.439729851]
+    , 
+      [774018.8172537395, 6610752.079270545]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Apostel-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773252.4180236558, 6610808.825199145]
+    , 
+      [773238.6672096065, 6610679.844954499]
+    , 
+      [773233.1972452094, 6610658.349522864]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> H&ouml;henberg-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781340.1661963105, 6610678.1085994495]
+    , 
+      [781434.42377052, 6610451.062663216]
+    , 
+      [781453.3587759706, 6610454.00779559]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> &Uuml;sdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [759510.4277849249, 6610873.914889195]
+    , 
+      [759520.7524739277, 6610778.816609186]
+    , 
+      [759662.841787439, 6610807.637124949]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Melaten<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770856.4108066466, 6610133.58266479]
+    , 
+      [770853.5243413564, 6610019.616718767]
+    , 
+      [770853.832721386, 6609918.891481269]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> K&ouml;ln-Arena<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777058.8325696564, 6610625.094243291]
+    , 
+      [777245.2039559875, 6610591.521662151]
+    , 
+      [777250.4537279108, 6610595.659793452]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Am Flehbach<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789047.1493307439, 6610341.755084595]
+    , 
+      [789050.4003041665, 6610335.593096731]
+    , 
+      [789051.6483263676, 6610333.224458813]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Technologie- und Industriepark Kalk-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780541.8578435535, 6610165.168625904]
+    , 
+      [780569.7270536353, 6610113.938790202]
+    , 
+      [780586.4268803954, 6610083.2522027055]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Vingst<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781935.5841741547, 6610170.311931579]
+    , 
+      [781985.7689743694, 6610143.79242374]
+    , 
+      [781993.1439326766, 6610139.989727628]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Aachener Weiher<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771058.0573799565, 6610290.174339402]
+    , 
+      [771041.2245701094, 6610171.856126398]
+    , 
+      [771041.0726104353, 6610170.793896597]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Fachhochschule Deutz<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777181.8348080524, 6610200.068065704]
+    , 
+      [777183.4518040356, 6610200.189486851]
+    , 
+      [777302.7093374056, 6610208.7756184805]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Schweden-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782541.4649402007, 6609229.563141411]
+    , 
+      [782541.4484180762, 6609227.245330007]
+    , 
+      [782455.733223271, 6609231.922253883]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Germanen-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776417.3248866644, 6609240.047452215]
+    , 
+      [776418.5317504405, 6609241.507995762]
+    , 
+      [776433.0813287016, 6609259.288955709]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ostheim-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784439.0200425421, 6609993.98475754]
+    , 
+      [784453.1184252249, 6609991.705959777]
+    , 
+      [784473.7486349022, 6609996.479557964]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Baumeister-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768971.032188618, 6610032.3050822085]
+    , 
+      [768964.02536159, 6610017.544521573]
+    , 
+      [768960.6871319874, 6610010.074894847]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Komponisten-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771687.7490140337, 6610105.447613101]
+    , 
+      [771687.75644552, 6610099.707415303]
+    , 
+      [771712.3128299151, 6610099.697966488]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Mauritius-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772588.2575963824, 6610121.700982097]
+    , 
+      [772603.4228505942, 6610109.186786479]
+    , 
+      [772613.0649189723, 6610111.014486299]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bergische Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787316.3260106681, 6612045.256226857]
+    , 
+      [787369.1932225849, 6611998.757032959]
+    , 
+      [787454.7581862833, 6611924.127765754]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gereons-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773766.6627050057, 6612007.628375342]
+    , 
+      [773754.0076666068, 6612000.358795824]
+    , 
+      [773770.8408540996, 6611981.462629493]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Stadtgarten-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772849.0124526634, 6611329.1784299845]
+    , 
+      [772839.1125961322, 6611313.010612069]
+    , 
+      [772831.5997106873, 6611317.585465609]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Lehmbacher Weg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787882.7226122629, 6611101.344231952]
+    , 
+      [787905.538050423, 6611121.401706601]
+    , 
+      [787928.7228794901, 6611140.707096384]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kliniken Merheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785293.7363867175, 6610643.3942203205]
+    , 
+      [785299.4988869436, 6610635.537587001]
+    , 
+      [785313.1416743618, 6610651.815895607]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Andreas-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773395.9634782546, 6611260.146560199]
+    , 
+      [773400.4834424827, 6611275.430018367]
+    , 
+      [773445.0843298477, 6611345.655785229]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-M&uuml;ngersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763950.0924762585, 6610935.710358791]
+    , 
+      [763962.5130405105, 6610802.960080327]
+    , 
+      [763964.1194142204, 6610785.901195215]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Porz<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785387.4931257837, 6602721.555328716]
+    , 
+      [785415.3524493303, 6602697.928809137]
+    , 
+      [785438.5164462229, 6602684.57114034]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Wei&szlig;er Rheinbogen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780386.755495367, 6601874.841703914]
+    , 
+      [780387.6919448188, 6601876.224969732]
+    , 
+      [780395.9047780667, 6601887.930689482]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Auenviertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778928.9630687174, 6602070.199577383]
+    , 
+      [778933.5438424004, 6602076.689424756]
+    , 
+      [778944.8312903645, 6602093.60619325]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Hochkirchen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775717.1330509883, 6600165.447644424]
+    , 
+      [775739.5139462088, 6599935.7514292]
+    , 
+      [775739.1676920635, 6599916.549547333]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Porz<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785618.9783536997, 6599996.7522932]
+    , 
+      [785761.9169942309, 6599953.984351725]
+    , 
+      [785803.8733038855, 6599950.216024643]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Grengel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789779.7641792281, 6600372.366328334]
+    , 
+      [790092.9657317973, 6600335.86856668]
+    , 
+      [790112.9728215688, 6600333.52416169]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Flughafen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [792550.254268961, 6599703.222525441]
+    , 
+      [792630.7806768453, 6599961.369947849]
+    , 
+      [792632.7717525142, 6599977.961075687]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Michaelshoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780066.098490236, 6600140.75661167]
+    , 
+      [780066.0509721872, 6600136.919223707]
+    , 
+      [780066.0091796998, 6600133.033753624]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Hahnwald<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775925.0376778367, 6600224.073694533]
+    , 
+      [775938.8674885031, 6600225.651755002]
+    , 
+      [775953.9772818795, 6600200.599083009]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Hahnwald<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778006.362519629, 6599613.486201402]
+    , 
+      [777912.9897778693, 6599390.380704734]
+    , 
+      [777904.4610097886, 6599373.526232457]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rondorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774706.3068953803, 6599836.234454286]
+    , 
+      [774811.9364352153, 6599720.572328573]
+    , 
+      [774852.023349542, 6599675.99149714]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Elsdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788997.0863320932, 6599452.3689343305]
+    , 
+      [788998.2814104514, 6599362.573221963]
+    , 
+      [789009.7086478317, 6599019.841618218]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rondorf-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775395.4704783488, 6598868.016558732]
+    , 
+      [775359.897235045, 6598800.992032943]
+    , 
+      [775238.1373956887, 6598571.733095232]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Wei&szlig;<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782511.016403159, 6599357.848258829]
+    , 
+      [782530.41930746, 6599343.250563213]
+    , 
+      [782559.9158170791, 6599349.526984975]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> S&uuml;rth-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781736.496096215, 6598681.988688102]
+    , 
+      [781762.0266392416, 6598652.379869205]
+    , 
+      [781762.7014991188, 6598651.597117629]
+    more...<br/>
+  
+      [780758.5254846787, 6598355.535408802]
+    , 
+      [780719.0420215692, 6598329.360214059]
+    , 
+      [780643.9816538626, 6598281.601565255]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Z&uuml;ndorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784874.8221800431, 6598481.706350182]
+    , 
+      [784925.9050848054, 6598466.198068215]
+    , 
+      [784963.4365800628, 6598455.291334763]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kaserne Wahnheide<br/>
+	    <i>Polygon:</i><br/>
+  
+      [791244.5870530334, 6598575.374741103]
+    , 
+      [791255.9506747809, 6598574.886654992]
+    , 
+      [791300.267594234, 6598577.2163660545]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI S&uuml;rth<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781213.1547178883, 6598406.0836868305]
+    , 
+      [781149.7753511973, 6598359.541010185]
+    , 
+      [781142.5929916578, 6598369.36056591]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Z&uuml;ndorf-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783977.8315641324, 6597808.5992558785]
+    , 
+      [784224.8171872161, 6597633.505660301]
+    , 
+      [784226.9923487015, 6597631.889212386]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Giesdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775181.1016417554, 6597491.44331062]
+    , 
+      [775184.9082679116, 6597498.401587428]
+    , 
+      [775263.2642549952, 6597663.7151629785]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> K&ouml;lnberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771148.7769193453, 6596903.272229519]
+    , 
+      [771148.5150559829, 6596902.562013387]
+    , 
+      [771099.2179208429, 6596909.159937856]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kaserne Lind<br/>
+	    <i>Polygon:</i><br/>
+  
+      [791351.3721188036, 6595884.482897299]
+    , 
+      [791371.8410371927, 6595879.905754926]
+    , 
+      [791372.554795936, 6595880.447450623]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> S&uuml;dstadt<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774047.1300000342, 6607894.544892084]
+    , 
+      [774153.3430531109, 6607820.237219335]
+    , 
+      [774144.0547343519, 6607805.927228668]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Deckstein<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767242.0663056384, 6607241.028718334]
+    , 
+      [767242.3675598536, 6607245.009414541]
+    , 
+      [767303.2859183414, 6607259.3503877595]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rheinbraun<br/>
+	    <i>Polygon:</i><br/>
+  
+      [765604.0637769054, 6607579.750404421]
+    , 
+      [765612.8927607656, 6607367.546406936]
+    , 
+      [765583.711286253, 6607374.883924158]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gremberger Hof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781704.788850112, 6607007.22520139]
+    , 
+      [781711.9557356149, 6606989.712382051]
+    , 
+      [781715.1906848345, 6606982.079816795]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE S&uuml;dstadt<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774318.1635794818, 6607024.161123256]
+    , 
+      [774544.2427727913, 6606919.900374151]
+    , 
+      [774557.924251482, 6606914.071331912]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung R&ouml;ttgen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [789307.6757737399, 6606853.667360233]
+    , 
+      [789326.9168221193, 6606846.604210779]
+    , 
+      [789357.4117396298, 6606847.9933165535]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Poller Kirchweg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776838.5335910415, 6606846.781738074]
+    , 
+      [777128.6149280841, 6606934.982945769]
+    , 
+      [777227.7771903542, 6606983.661045861]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Poll-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779445.0364108331, 6606517.0153534915]
+    , 
+      [779435.1272160442, 6606473.802415352]
+    , 
+      [779390.9955691063, 6606483.33957983]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Poll<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777823.7703309316, 6606598.379883773]
+    , 
+      [777832.5134993343, 6606588.072164481]
+    , 
+      [777859.0748076197, 6606605.715273525]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Poller Rheinaue<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776795.5340975828, 6606680.131262343]
+    , 
+      [776802.284642074, 6606683.041393552]
+    , 
+      [776831.794486697, 6606696.347252036]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Gremberghoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786355.6517919911, 6606515.678044784]
+    , 
+      [786412.8439559181, 6606514.836553702]
+    , 
+      [786461.6135522542, 6606517.908222597]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Gro&szlig;markt<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774344.3121820434, 6606126.080257582]
+    , 
+      [774380.5724228726, 6606109.631505631]
+    , 
+      [774399.0880054887, 6606136.4474411085]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Zollstock-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773345.2218379452, 6606258.656087611]
+    , 
+      [773371.8222939625, 6606246.162097444]
+    , 
+      [773375.5888399044, 6606255.223583951]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Bayenthal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775933.2771266511, 6606504.8084621085]
+    , 
+      [776092.9313146586, 6606098.120046004]
+    , 
+      [775955.3769682408, 6606028.322920458]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Airport-Businesspark<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785640.6828964627, 6604994.928701865]
+    , 
+      [785607.2619698731, 6604967.684762245]
+    , 
+      [784950.7695530913, 6604991.392148777]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Zollstock<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772439.6553302769, 6606163.008977866]
+    , 
+      [772580.6698081061, 6606087.51521058]
+    , 
+      [772583.5168659921, 6606118.47632905]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kaserne Westhoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782055.6492003637, 6605312.188530473]
+    , 
+      [782134.1403559296, 6605243.772500111]
+    , 
+      [782212.6790622638, 6605177.752081968]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Raderberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775028.4915483288, 6605604.247195777]
+    , 
+      [775038.2283924934, 6605549.683183489]
+    , 
+      [775028.7857824084, 6605547.7752698]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Horbeller H&ouml;fe<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763503.0689847706, 6605115.709573339]
+    , 
+      [763577.1917159188, 6605193.669443866]
+    , 
+      [763587.2494792488, 6605203.835623861]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Eil<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787397.1493340984, 6604901.313612266]
+    , 
+      [787905.7778330422, 6604488.038806372]
+    , 
+      [788073.0102576644, 6604352.147481381]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Wohnpark Bayenthal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776066.5796763558, 6604484.69033813]
+    , 
+      [776068.9809540432, 6604476.030666285]
+    , 
+      [776043.392650071, 6604467.601804855]
+    more...<br/>
+  
+      [776068.9809540432, 6604476.030666285]
+    , 
+      [776069.0140645702, 6604476.041581023]
+    , 
+      [776068.9874518751, 6604476.0073482385]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Vorgebirgspark<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773465.286243731, 6605292.106758091]
+    , 
+      [773464.7453631026, 6605220.220297121]
+    , 
+      [773431.5445403939, 6605220.648137063]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Zollstock<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772696.6163031851, 6605307.324175123]
+    , 
+      [772724.8789241753, 6605309.358993129]
+    , 
+      [772768.334589087, 6605312.516310902]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Westhoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780915.2445335508, 6604099.257143034]
+    , 
+      [780891.544431095, 6604106.198721992]
+    , 
+      [780888.2332901396, 6604113.526519176]
+    more...<br/>
+  
+      [780880.0794247907, 6604054.201401471]
+    , 
+      [780915.2445335508, 6604099.257143034]
+    , 
+      [780889.7872542845, 6604066.238145955]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gremberghoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784799.3668562999, 6603970.005349899]
+    , 
+      [784845.6549279992, 6604025.67536601]
+    , 
+      [784998.3363922854, 6604189.171943497]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ensen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782910.9652142308, 6604539.943183651]
+    , 
+      [782928.98475239, 6604517.933897072]
+    , 
+      [782923.86986672, 6604518.846795675]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Westhoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782540.0773424071, 6604005.731088177]
+    , 
+      [782519.8291173625, 6603936.942281237]
+    , 
+      [782510.0253200196, 6603910.215575469]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Eil<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788202.0508980559, 6603839.710606604]
+    , 
+      [788238.9448131438, 6603806.589075366]
+    , 
+      [788239.1988459484, 6603790.6890204875]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ensen-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783257.2781194662, 6602934.30095345]
+    , 
+      [783361.7986932057, 6603077.081235254]
+    , 
+      [783366.6203693427, 6603083.534190785]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rodenkirchen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778195.107513414, 6603135.871373621]
+    , 
+      [778319.2340046708, 6603040.700796199]
+    , 
+      [778320.652237878, 6603042.617343306]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> K&uuml;nstler-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780676.7820617467, 6600623.901536262]
+    , 
+      [780717.3119481128, 6600594.016002113]
+    , 
+      [780723.4820468463, 6600589.458169202]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Worringen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762396.7028636261, 6636201.169872451]
+    , 
+      [762396.7274759959, 6636201.018069389]
+    , 
+      [762421.3237454176, 6636208.448638634]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Worringen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762752.231923903, 6633032.556420478]
+    , 
+      [762759.461804494, 6633031.532904988]
+    , 
+      [762821.5219748955, 6633045.000093149]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Roggendorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762844.6310384084, 6630678.055829539]
+    , 
+      [762851.7314451325, 6630657.756527975]
+    , 
+      [762860.0531731561, 6630660.716185318]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Vogelsacker<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775366.3051099557, 6596086.592750357]
+    , 
+      [775495.0277759421, 6595911.969879806]
+    , 
+      [775521.402731486, 6595875.972067976]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Niehl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774843.7690408338, 6620593.3006745195]
+    , 
+      [774896.7006676638, 6620376.3297615]
+    , 
+      [774905.1229229242, 6620349.683920398]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Langel (lrh.)<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769806.9677789605, 6630658.983163899]
+    , 
+      [770024.999639395, 6630460.796769665]
+    , 
+      [770030.1116650248, 6630459.507074852]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bayer-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777981.2457705573, 6621557.804315294]
+    , 
+      [778004.20877278, 6621477.1617124295]
+    , 
+      [778023.5967066098, 6621437.513433857]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Berliner Stra&szlig;e<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782888.8901166524, 6619921.715727396]
+    , 
+      [782882.4141246553, 6619892.8717555255]
+    , 
+      [782876.342242351, 6619865.707539292]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Schweinheim<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784785.0711999454, 6615582.991908517]
+    , 
+      [784777.1159010219, 6615537.263000286]
+    , 
+      [784782.9561310962, 6615536.734612249]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI M&uuml;lheim-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778990.4085116754, 6614657.783678314]
+    , 
+      [778942.7740564791, 6614567.502418379]
+    , 
+      [778941.8117291057, 6614565.179909633]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Stegerwald-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779163.4388526784, 6613241.504552004]
+    , 
+      [779160.3005591681, 6613228.516762274]
+    , 
+      [779145.5555150862, 6613198.396383658]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Messe<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777202.535126597, 6611675.80759892]
+    , 
+      [777370.7334992763, 6611576.776594543]
+    , 
+      [777372.5615562786, 6611575.700429557]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neubr&uuml;ck<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786469.4809779022, 6610455.512589245]
+    , 
+      [786498.8922429236, 6610446.749552524]
+    , 
+      [786516.0262810456, 6610481.755382719]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bungalow-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786175.2463969482, 6610958.184219297]
+    , 
+      [786234.5649125378, 6610936.316245189]
+    , 
+      [786250.0785650794, 6610947.859856977]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Merheim-Mitte<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784300.7290994743, 6612215.953338818]
+    , 
+      [784362.8856709203, 6612214.54507006]
+    , 
+      [784447.2543707038, 6612219.2041894635]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Gernsheimer Str.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783798.1825479169, 6608857.595989382]
+    , 
+      [783836.917711873, 6608785.87085363]
+    , 
+      [783827.7513293772, 6608786.000586615]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> H&ouml;henberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783125.9987066005, 6611314.094118757]
+    , 
+      [783153.2789353583, 6611221.659590472]
+    , 
+      [783164.1749153028, 6611224.952421053]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Germania-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782330.4995426337, 6611179.824483651]
+    , 
+      [782342.5649972962, 6611165.870576349]
+    , 
+      [782340.2353392049, 6611170.096607268]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Vingst<br/>
+	    <i>Polygon:</i><br/>
+  
+      [781975.9017269237, 6609331.539108595]
+    , 
+      [782000.6030593973, 6609319.953210147]
+    , 
+      [782003.8771216392, 6609325.38551425]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alter Deutzer Postweg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782676.3807992167, 6607196.165708283]
+    , 
+      [782757.8889887715, 6607380.606854438]
+    , 
+      [782962.7505431377, 6607297.724717553]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Immendorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774283.7194510296, 6597167.649098262]
+    , 
+      [774292.6245401789, 6597164.188162465]
+    , 
+      [774299.5648765593, 6597167.77635818]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> H&ouml;ningen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772885.4182887506, 6600897.18932131]
+    , 
+      [772825.5254421213, 6600786.5758295]
+    , 
+      [772814.2505423122, 6600765.782971726]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rondorf-West<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773962.0151811839, 6598619.672258287]
+    , 
+      [774010.6750056165, 6598605.76088569]
+    , 
+      [774005.6561678287, 6598583.508282746]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> G&uuml;terverkehrszentrum Eifeltor<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770853.3215328493, 6599626.734791489]
+    , 
+      [770782.6061210702, 6599524.302340178]
+    , 
+      [770758.0704248468, 6599488.499179687]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Schillingsrott<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778026.428956204, 6602275.623984459]
+    , 
+      [778074.9418928045, 6602138.617794912]
+    , 
+      [778084.4098846655, 6602113.091841177]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Flu&szlig;viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779241.1273389756, 6601657.314488609]
+    , 
+      [779503.4843848747, 6601297.700765806]
+    , 
+      [779695.8225036513, 6601034.047525073]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> B&uuml;ropark Rodenkirchen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778797.042631733, 6601383.910246139]
+    , 
+      [778825.3771718191, 6601345.17049787]
+    , 
+      [778812.745020812, 6601336.379179757]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Arnoldsh&ouml;he<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775155.932913959, 6604429.509231094]
+    , 
+      [775162.3952316412, 6604395.87860928]
+    , 
+      [775237.2583256669, 6604409.703129148]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Dichter-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776025.7024455395, 6604575.253481498]
+    , 
+      [776025.7098994154, 6604526.393337352]
+    , 
+      [776023.7723465621, 6604525.813458626]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rheinsteinstr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774968.0826372845, 6605183.5828806255]
+    , 
+      [774974.0007111899, 6605138.434959867]
+    , 
+      [775029.7745203783, 6605140.689103206]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Bayenthal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776095.2909224367, 6606092.168638967]
+    , 
+      [776232.3665129183, 6605799.274114215]
+    , 
+      [776272.4106688712, 6605713.675389802]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Raderthal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773612.7534168158, 6604549.701688144]
+    , 
+      [773616.6295671153, 6604511.376269874]
+    , 
+      [773637.7068237127, 6604503.725300764]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> S&uuml;dbahnhof-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771618.9436258607, 6609148.63614072]
+    , 
+      [771626.7491000359, 6609145.058961988]
+    , 
+      [771642.6241295879, 6609148.714931293]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> St&uuml;ttgerhof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [764487.9297605532, 6607264.848029458]
+    , 
+      [764488.679305155, 6607262.616732209]
+    , 
+      [764490.8682060906, 6607256.225570223]
+    more...<br/>
+  
+      [765413.4593921695, 6607408.408687206]
+    , 
+      [765415.4423982728, 6607403.405054409]
+    , 
+      [765240.568366298, 6607401.54883807]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Butzweiler Hof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768313.2316217654, 6617785.261037025]
+    , 
+      [768358.1407249899, 6617617.871132936]
+    , 
+      [768365.0153216189, 6617594.1050147535]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ossendorf-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768630.4528636778, 6616162.706498436]
+    , 
+      [768635.7115722703, 6616091.6926273545]
+    , 
+      [768636.0390014672, 6616089.47198014]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Zoo-Flora<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775317.1697896116, 6614641.260393696]
+    , 
+      [775396.7940039196, 6614824.408291162]
+    , 
+      [775434.3949964107, 6614833.971788649]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Riehl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775626.1748562064, 6614942.479370539]
+    , 
+      [775626.9388037886, 6614947.585474407]
+    , 
+      [775644.9859075972, 6615070.899590523]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> L&uuml;tzlongerich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768818.4816903649, 6619671.549536032]
+    , 
+      [768781.0228906472, 6619638.530952403]
+    , 
+      [768641.6024299222, 6619775.396122543]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Nippes<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774235.3635504344, 6616444.013452755]
+    , 
+      [774235.2847056934, 6616442.822457339]
+    , 
+      [774235.0370842498, 6616441.570483984]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Langel-Nord (rrh.)<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780176.267262928, 6594661.379127764]
+    , 
+      [780115.7072738641, 6594719.144066214]
+    , 
+      [780133.4926392933, 6594739.383756008]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Godorf-West<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775664.3550987121, 6594350.94841679]
+    , 
+      [775632.8938444097, 6593923.030115269]
+    , 
+      [775593.2111165734, 6593386.400806846]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Langel-S&uuml;d (rrh.)<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780115.7072738641, 6594719.144066214]
+    , 
+      [780175.6446842477, 6594661.66501486]
+    , 
+      [780193.4721080665, 6594718.909042998]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Lind<br/>
+	    <i>Polygon:</i><br/>
+  
+      [790524.5541429184, 6592887.14068496]
+    , 
+      [790511.3895712132, 6592878.256102877]
+    , 
+      [790510.3328976018, 6592880.173992429]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Wei&szlig;<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783028.8109724374, 6599824.345180359]
+    , 
+      [783014.7221575575, 6599785.767825775]
+    , 
+      [782991.7709113318, 6599747.234008428]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Godorf-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778608.5203318727, 6596277.367696377]
+    , 
+      [778609.5527617248, 6596276.545204738]
+    , 
+      [778611.1553941332, 6596275.794388326]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Godorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776746.4166032713, 6594202.506080455]
+    , 
+      [776741.8873216617, 6594186.289364771]
+    , 
+      [776739.7584004935, 6594185.461702066]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Marienburg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776043.392650071, 6604467.601804855]
+    , 
+      [776068.9809540432, 6604476.030666285]
+    , 
+      [776068.9825432948, 6604476.02467704]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Justiz-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772286.0287786515, 6607800.375560837]
+    , 
+      [772297.9736292259, 6607792.840729735]
+    , 
+      [772312.0316526351, 6607806.366095632]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Zollstock<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772726.5621124622, 6607548.448560793]
+    , 
+      [772746.99628888, 6607526.805854594]
+    , 
+      [772751.9705900855, 6607492.998763199]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung S&uuml;dfriedhof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771519.6832712287, 6603381.613252909]
+    , 
+      [771544.9931272044, 6603390.987476392]
+    , 
+      [771549.4356236269, 6603384.378426335]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Wei&szlig;haus-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771995.6252006282, 6606215.66132458]
+    , 
+      [771972.6965018805, 6606168.717881215]
+    , 
+      [771933.628140784, 6606089.665061798]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Hohenlind<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767864.3919462481, 6608526.275662348]
+    , 
+      [767876.0577234635, 6608516.829778236]
+    , 
+      [767878.262471368, 6608517.152162695]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Vogelsang<br/>
+	    <i>Polygon:</i><br/>
+  
+      [765860.0502162272, 6612679.890422428]
+    , 
+      [765988.9343409856, 6612638.223451604]
+    , 
+      [765985.4703232006, 6612655.944176694]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Merkenich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774426.3665988586, 6626332.696100489]
+    , 
+      [774430.2639797424, 6626329.76548882]
+    , 
+      [774506.4408021887, 6626385.541987687]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Meschenich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772004.3126175862, 6596979.553277591]
+    , 
+      [771953.2635049756, 6596740.97964774]
+    , 
+      [771950.5680524829, 6596731.612593103]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Rennbahn-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773379.5278392781, 6618468.576733249]
+    , 
+      [773500.5436057968, 6618540.930033864]
+    , 
+      [773649.5133987783, 6618587.551420199]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> F&uuml;hlingen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768676.81224892, 6629347.502808256]
+    , 
+      [768701.1503642646, 6629328.525991952]
+    , 
+      [768711.088838551, 6629324.574642336]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Porz-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786600.0994779381, 6602323.123795436]
+    , 
+      [786612.5844077999, 6602283.693935208]
+    , 
+      [786622.295104146, 6602257.059427667]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Heumar<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786534.6588441308, 6607121.541011599]
+    , 
+      [786527.3472951645, 6607087.6451845355]
+    , 
+      [786521.3805695226, 6607092.160431331]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Gremberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779887.4878625487, 6608933.788110275]
+    , 
+      [779948.0661261344, 6608851.9222379355]
+    , 
+      [779950.1962449321, 6608853.687253052]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Humboldt<br/>
+	    <i>Polygon:</i><br/>
+  
+      [777853.1810481152, 6608769.293630479]
+    , 
+      [778121.6483138384, 6609200.579405141]
+    , 
+      [778195.9185213714, 6609144.039313683]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Deutz<br/>
+	    <i>Polygon:</i><br/>
+  
+      [775702.173424062, 6610689.401380319]
+    , 
+      [775702.1892371366, 6610690.608062536]
+    , 
+      [775703.2793305502, 6610743.61908558]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Z&uuml;ndorf-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785485.6351589193, 6599609.880015494]
+    , 
+      [785489.8253620449, 6599609.788178011]
+    , 
+      [785494.0319580263, 6599609.933823319]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Porz-Mitte<br/>
+	    <i>Polygon:</i><br/>
+  
+      [785938.6957412102, 6601768.394924716]
+    , 
+      [785945.6589435427, 6601753.065553557]
+    , 
+      [785948.0024761077, 6601753.206341702]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Am Urbanskreuz<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786553.0454044322, 6593239.610640074]
+    , 
+      [786545.6476276652, 6593230.748139591]
+    , 
+      [786531.613532511, 6593230.776935896]
+    more...<br/>
+  
+      [787601.4025058156, 6593734.588066163]
+    , 
+      [787597.0122809189, 6593727.330375584]
+    , 
+      [787475.6679509643, 6593782.604788331]
+    more...<br/>
+  
+      [787244.9089128699, 6593458.738384328]
+    , 
+      [787235.0283800982, 6593456.394028486]
+    , 
+      [787197.3559669231, 6593623.978332523]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Portastr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [790076.4574292328, 6594585.255168415]
+    , 
+      [790054.8716494091, 6594374.538953947]
+    , 
+      [790038.8017809344, 6594258.650345679]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Wahn<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788572.118683628, 6597531.89596621]
+    , 
+      [788574.3840298642, 6597474.941578905]
+    , 
+      [788776.1991065005, 6597482.178306236]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Lind<br/>
+	    <i>Polygon:</i><br/>
+  
+      [791050.3896086029, 6595497.979919804]
+    , 
+      [791053.819952086, 6595423.901893803]
+    , 
+      [791098.0034161573, 6595425.837449145]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ostheim-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783652.378903788, 6608867.883019343]
+    , 
+      [783625.405087536, 6608803.136649859]
+    , 
+      [783625.323657921, 6608801.851638866]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Wahnheide<br/>
+	    <i>Polygon:</i><br/>
+  
+      [791233.9772684072, 6597695.363972432]
+    , 
+      [791241.0969836836, 6597545.579344891]
+    , 
+      [791244.3896626253, 6597508.8402243415]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Grengel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [791012.3701860032, 6600342.83559981]
+    , 
+      [791064.0833412089, 6600115.520784983]
+    , 
+      [791064.3204638606, 6600114.454536794]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Grengel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [790514.7603456179, 6600204.9814349925]
+    , 
+      [790514.7751918708, 6600202.792351398]
+    , 
+      [790320.8903996492, 6600301.6486621965]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Eil-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787654.6692676899, 6602950.5547203]
+    , 
+      [787690.858628008, 6602776.550426431]
+    , 
+      [787698.9726288348, 6602738.259357094]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Finkenberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786449.414587669, 6603685.713949633]
+    , 
+      [786462.8617919008, 6603656.863095836]
+    , 
+      [786476.0530232724, 6603627.825732621]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Marsdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762605.0751513368, 6607873.019629224]
+    , 
+      [762689.6441456323, 6607830.98835643]
+    , 
+      [762697.4920181913, 6607831.929423418]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> L&ouml;venich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [759615.1037906645, 6611573.781147623]
+    , 
+      [759624.0945075493, 6611583.1779387295]
+    , 
+      [759633.6944955543, 6611593.219156566]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> L&ouml;venich-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [760645.5216306525, 6612621.96345875]
+    , 
+      [760677.2139264847, 6612584.893235451]
+    , 
+      [760687.5382276756, 6612593.775107197]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-M&uuml;ngersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [766817.9574613817, 6612173.30532446]
+    , 
+      [766769.2247855071, 6611942.000797602]
+    , 
+      [766619.4215245746, 6611968.427181347]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Meschenich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770652.4625735852, 6597083.082250662]
+    , 
+      [770653.8336683958, 6597082.716275565]
+    , 
+      [770665.2877985907, 6597085.759427586]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Volkhoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767270.0125478248, 6624515.732094892]
+    , 
+      [767251.7576642854, 6624504.357559512]
+    , 
+      [767254.3895875083, 6624492.411270096]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GI Emdener Str.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773075.1664041851, 6625310.095784793]
+    , 
+      [773091.6626523684, 6625288.94863212]
+    , 
+      [773097.8225286773, 6625283.0468759835]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Schlachthof-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [772196.9424862852, 6614647.773680944]
+    , 
+      [772200.6862065276, 6614641.847284754]
+    , 
+      [772227.4471810487, 6614645.414688202]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Schlachthof-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771756.1448877302, 6614669.044425802]
+    , 
+      [771880.5475956602, 6614541.974574528]
+    , 
+      [771883.2376175999, 6614542.83095635]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Weiden<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762435.8569988308, 6611093.454162897]
+    , 
+      [762436.794176896, 6611074.385870267]
+    , 
+      [762483.0221514249, 6611076.662953245]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ossendorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768995.5274084306, 6615084.424920199]
+    , 
+      [769027.3930430852, 6615206.663205614]
+    , 
+      [769027.9278988277, 6615226.97882372]
+    more...<br/>
+  
+      [768970.6764256104, 6614989.970958601]
+    , 
+      [768995.5274084306, 6615084.424920199]
+    , 
+      [768976.636567118, 6615011.9033936495]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Takufeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770089.028803168, 6615604.539027351]
+    , 
+      [770107.0155495526, 6615580.273054198]
+    , 
+      [770120.2503280687, 6615561.309948699]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Riehl<br/>
+	    <i>Polygon:</i><br/>
+  
+      [776729.4853888716, 6616116.395582203]
+    , 
+      [776750.8996693897, 6616069.196945881]
+    , 
+      [776827.0192502674, 6615905.784634084]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Nordpark<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774923.7425850431, 6616241.753038659]
+    , 
+      [774924.683501141, 6616205.636034794]
+    , 
+      [774925.7753845921, 6616159.203868902]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Libur<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787409.2549550531, 6593283.495600936]
+    , 
+      [787464.7922331465, 6593128.698713153]
+    , 
+      [787488.5902434418, 6593081.602949441]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Lindenthal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769094.1436523886, 6608511.125791464]
+    , 
+      [769163.7390297622, 6608385.904562294]
+    , 
+      [769166.2166425368, 6608381.365087051]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kriel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769753.4602399132, 6607232.322821702]
+    , 
+      [769763.8860928735, 6607221.510045046]
+    , 
+      [769792.8345911307, 6607228.610649509]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Klettenberg<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771055.1808300307, 6606402.90143031]
+    , 
+      [771068.0990010401, 6606394.134306738]
+    , 
+      [771078.069579413, 6606404.055805123]
+    more...<br/>
+  
+      [770486.4756855804, 6605321.354458017]
+    , 
+      [770442.8686726409, 6605256.388575281]
+    , 
+      [770431.6601929988, 6605239.658965459]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Beethovenpark<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770156.69636898, 6606455.6848875275]
+    , 
+      [770443.0577696286, 6606129.699524217]
+    , 
+      [770611.4402242822, 6605960.096727051]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Humboldt<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779429.9990086977, 6609286.3859699555]
+    , 
+      [779416.7265798643, 6609240.616245252]
+    , 
+      [779415.7940311937, 6609240.740238366]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung L&uuml;derichstr.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779642.588213882, 6609299.079278791]
+    , 
+      [779772.519563496, 6609228.077497119]
+    , 
+      [779793.111145931, 6609216.840454848]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kalk-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780595.3551735742, 6611865.946430958]
+    , 
+      [780605.2485121372, 6611769.4177248785]
+    , 
+      [780613.207321124, 6611692.420459108]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Kalk<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779594.4779190652, 6611416.517672946]
+    , 
+      [779619.2795770692, 6611343.932389612]
+    , 
+      [779662.740282448, 6611371.735874571]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Uni-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771033.3305454118, 6609084.962628662]
+    , 
+      [771052.5943273271, 6609055.299126492]
+    , 
+      [771100.3807220027, 6609067.652938407]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Uni-Center<br/>
+	    <i>Polygon:</i><br/>
+  
+      [771815.6277165082, 6608588.221231778]
+    , 
+      [771822.0093754648, 6608569.310630123]
+    , 
+      [771825.8927287005, 6608570.880755801]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Holweide-West<br/>
+	    <i>Polygon:</i><br/>
+  
+      [783926.5679498203, 6617030.363798837]
+    , 
+      [783926.9966036448, 6617024.795282818]
+    , 
+      [783985.5011008269, 6617029.3371349145]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Holweide-Ost<br/>
+	    <i>Polygon:</i><br/>
+  
+      [784750.5236663825, 6617231.524639362]
+    , 
+      [784772.977046023, 6617149.561075173]
+    , 
+      [784804.0988565597, 6617157.857597453]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Waldsiedlung Heidgen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787458.2271208129, 6621387.328862844]
+    , 
+      [787465.2953404757, 6621382.773284922]
+    , 
+      [787475.7548345571, 6621384.463242665]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Heimersdorf-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767412.6482703366, 6623730.073363519]
+    , 
+      [767412.9623806382, 6623731.119297752]
+    , 
+      [767424.2413859471, 6623770.4755803915]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Chorweiler<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767299.5879255639, 6625171.022439975]
+    , 
+      [767306.8650745299, 6625213.88653998]
+    , 
+      [767393.1243573864, 6625334.171489208]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Seeberg-Nord<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768756.6832271051, 6625593.513078613]
+    , 
+      [768844.1500393469, 6625536.30896733]
+    , 
+      [768875.3805622228, 6625558.0230431575]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ehrenfeld-West<br/>
+	    <i>Polygon:</i><br/>
+  
+      [769185.213473688, 6614364.884893293]
+    , 
+      [769179.6075782003, 6614299.482012135]
+    , 
+      [769173.6507805807, 6614246.762080157]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Bickendorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768133.7168351657, 6615189.977878862]
+    , 
+      [768151.6446809537, 6615156.581850538]
+    , 
+      [768176.2645975851, 6615188.614532543]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Eupener Str.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767038.4171248559, 6611834.077845879]
+    , 
+      [767016.2880412234, 6611695.929514383]
+    , 
+      [767011.9041676461, 6611668.617126178]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE M&uuml;ngersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [767037.7766835815, 6612121.56677668]
+    , 
+      [767065.8993651244, 6612102.928797323]
+    , 
+      [767066.1019090693, 6612104.017912613]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Alt-Widdersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [760337.4561475294, 6614449.762794273]
+    , 
+      [760332.3213260368, 6614422.875391368]
+    , 
+      [760324.3174047413, 6614407.173530118]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Neu-Widdersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [760788.2795537505, 6616569.187291235]
+    , 
+      [760798.3167860948, 6616554.15111299]
+    , 
+      [760829.2422799041, 6616574.982706669]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Junkersdorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [763005.8513775842, 6610779.747481143]
+    , 
+      [763027.6369698801, 6610779.081534465]
+    , 
+      [763027.7687787511, 6610783.637675753]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Urbach<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788255.096678574, 6601595.411396866]
+    , 
+      [788373.1218900259, 6601439.058026862]
+    , 
+      [788451.656226397, 6601335.017340549]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Mielenforst<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786702.7731522075, 6615610.08446726]
+    , 
+      [786722.9410921999, 6615583.318857538]
+    , 
+      [786778.4124574794, 6615510.134325214]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Ober-Iddelsfeld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786232.0214183617, 6615468.610087176]
+    , 
+      [786274.9373303037, 6615468.285588181]
+    , 
+      [786292.191492478, 6615533.739045291]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Thurn<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788177.9581374007, 6617942.553926283]
+    , 
+      [788182.7638754026, 6617940.559973755]
+    , 
+      [788202.2476206829, 6617942.816784296]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> S&uuml;rth<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779582.6203881532, 6598919.460705518]
+    , 
+      [779656.8902274373, 6598907.8935413165]
+    , 
+      [779662.819575511, 6598906.969870601]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Michaelshoven<br/>
+	    <i>Polygon:</i><br/>
+  
+      [779003.5036439562, 6599727.01408766]
+    , 
+      [779018.324252397, 6599684.785298064]
+    , 
+      [779036.696676222, 6599638.543684759]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Rodenkirchen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [778729.686689531, 6599417.196224871]
+    , 
+      [778753.2711576881, 6599366.877163054]
+    , 
+      [778763.7939123379, 6599360.821577629]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Longerich<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768641.6024299222, 6619775.396122543]
+    , 
+      [768781.0228906472, 6619638.530952403]
+    , 
+      [768818.4816903649, 6619671.549536032]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Bilderst&ouml;ckchen<br/>
+	    <i>Polygon:</i><br/>
+  
+      [770134.3241573251, 6618459.460171071]
+    , 
+      [770174.8259142408, 6618408.847910614]
+    , 
+      [770177.5472972408, 6618410.04328189]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> GE Ossendorf<br/>
+	    <i>Polygon:</i><br/>
+  
+      [768097.5148850962, 6618088.788628233]
+    , 
+      [768098.4279768994, 6618065.673874139]
+    , 
+      [767990.2969149761, 6617909.341640645]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Martins-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774892.8812689371, 6610914.026569822]
+    , 
+      [774893.0683584481, 6610910.1491645975]
+    , 
+      [774910.0423158053, 6610912.198368277]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> City<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773968.6471916514, 6609885.865594006]
+    , 
+      [773971.6716838605, 6609912.884237453]
+    , 
+      [773991.286866321, 6609912.391891755]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Gelsenkirchener Str.<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774716.61881509, 6616728.042529526]
+    , 
+      [774751.5324104396, 6616727.777442273]
+    , 
+      [774753.5780876554, 6616727.862033661]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Volkspark-Siedlung<br/>
+	    <i>Polygon:</i><br/>
+  
+      [774525.2238348708, 6604166.094172478]
+    , 
+      [774580.4848751375, 6604165.945879623]
+    , 
+      [774580.9151541952, 6604188.171368033]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Oberer Bruch<br/>
+	    <i>Polygon:</i><br/>
+  
+      [787594.2686515527, 6611291.334539151]
+    , 
+      [787613.824246385, 6611240.81451229]
+    , 
+      [787451.4037644184, 6611119.454673684]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Ausbesserungswerk Nippes<br/>
+	    <i>Polygon:</i><br/>
+  
+      [773160.4341792861, 6614705.363308834]
+    , 
+      [773071.1045227958, 6614692.450570406]
+    , 
+      [773039.6239734874, 6614687.881919447]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Widdersdorf-S&uuml;d<br/>
+	    <i>Polygon:</i><br/>
+  
+      [762534.6171424264, 6615858.670612205]
+    , 
+      [762568.2461388011, 6614826.442961514]
+    , 
+      [762571.3884088167, 6614291.613940047]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Madaus<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786051.282054846, 6611286.338760911]
+    , 
+      [786076.6253342337, 6611251.048870205]
+    , 
+      [786082.4970937832, 6611243.00745086]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Siedlung Haus K&ouml;zal<br/>
+	    <i>Polygon:</i><br/>
+  
+      [760199.9669592241, 6612702.174954079]
+    , 
+      [760194.4994482879, 6612706.223645042]
+    , 
+      [760190.8807240963, 6612733.88717232]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Waldbad-Viertel<br/>
+	    <i>Polygon:</i><br/>
+  
+      [782815.1001625302, 6608009.914022443]
+    , 
+      [782477.7801409583, 6608088.115831416]
+    , 
+      [782479.6896193861, 6608096.712176739]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> S&uuml;rther Feld<br/>
+	    <i>Polygon:</i><br/>
+  
+      [780066.098490236, 6600140.75661167]
+    , 
+      [780489.4959367733, 6600025.152346059]
+    , 
+      [780497.5360689468, 6600023.023940145]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Eltzhof<br/>
+	    <i>Polygon:</i><br/>
+  
+      [788326.5128022626, 6596457.501830193]
+    , 
+      [788397.7718802236, 6596218.466555803]
+    , 
+      [788408.8193738541, 6596192.241846927]
+    more...<br/>
+  <br/>
+  <i>NAME: </i> Germania Carr&eacute;<br/>
+	    <i>Polygon:</i><br/>
+  
+      [786166.7771014146, 6600525.683765613]
+    , 
+      [786132.0735994894, 6600230.474053728]
+    , 
+      [786131.0779575647, 6600222.811789927]
+    more...<br/>
+  <br/>
+  </div>
+
+<br/><br/>
+
+</body>
+
+</html>
